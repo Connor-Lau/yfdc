@@ -1,0 +1,98 @@
+// 自定义 vant  Dialog样式, 跟据UI调整
+// Dialog.alert({
+//     title: '提示',
+//     message: '',
+//     showCancelButton: true,
+//     confirmButtonText: '确定',
+//     cancelButtonText: '关闭',
+//     className: 'dialog-style-box', //自定义弹窗类名
+//     overlayClass: 'overlay-style' // 自定义遮罩层类名
+// })
+img {
+    pointer-events: none;
+    /* 禁止长按图片保存 */
+}
+
+.overlay-style {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+// 弹窗样式
+.dialog-style-box,.dialog-style-box2 {
+    border-radius: 6px;
+
+    .van-dialog__header {
+        padding-top: 0;
+        height: 44px;
+        line-height: 44px;
+        background: rgba(246, 246, 246, 0.76);
+        position: relative;
+
+        &::after {
+            content: '';
+            width: 200%;
+            height: 1px;
+            background-color: #CCCCCC;
+            position: absolute;
+            left: -50%;
+            bottom: 0;
+            z-index: 2;
+            transform: scale(0.5);
+        }
+    }
+
+    .van-dialog__content {
+        display: flex;
+        align-items: center;
+        min-height: 104px;
+    }
+
+    .van-dialog__message {
+        padding: 16px 24px;
+        font-size: 16px;
+        color: #000;
+    }
+
+    .van-hairline--top::after,
+    .van-hairline--left::after {
+        border-color: #F1F1F1;
+    }
+
+    .van-hairline--top::after {
+        border-top-width: 2px;
+    }
+
+    .van-hairline--left::after {
+        border-left-width: 2px;
+    }
+
+    .van-dialog__cancel,
+    .van-dialog__confirm {
+        height: 44px;
+    }
+
+    .van-dialog__cancel {
+        .van-button__text {
+            color: #000;
+            font-size: 14px;
+        }
+    }
+
+    .van-dialog__confirm {
+        color: #52A3FF;
+
+        .van-button__text {
+            font-size: 14px;
+            font-weight: bold;
+        }
+    }
+
+}
+
+.dialog-style-box2 {
+  .van-dialog__message {
+    padding: 0.24rem 0.24rem;
+    font-size: 0.3rem;
+    color: #000;
+  }
+}
