@@ -93,6 +93,8 @@ export default {
     emptyIpt () {
       this.inputData = ''
       this.listsCityData = []
+      console.log('ss')
+      console.log(11);    
     },
     searchCity () {
       this.listsCityData = []
